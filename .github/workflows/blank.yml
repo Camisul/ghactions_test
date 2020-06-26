@@ -17,16 +17,17 @@ jobs:
         ref: 'gh-pages'
     - name: Build
       run: |
-        cd src
-        ls -la
-        mkdir build
-        echo "Test" > build/file.html
-        mv ./build ../pages/
-        cd ../pages/
-        ls -la
-        git rm -rf !\(build\)
-        rm -rf .github
-        mv build/\* .
+        'cd src'
+        'ls -la'
+        'mkdir build'
+        'echo "Test" > build/file.html'
+        'cd ../pages/'
+        'git rm -rf *'
+        'rm -rf .github'
+        'mv ../src/build .'
+        'ls -la'
+        'mv build/* .'
+        'ls -la'
       shell: bash
     - name: Commit files
       run: |
