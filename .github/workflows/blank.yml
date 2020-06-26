@@ -8,6 +8,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        ref: 'gp-pages'
     - name: Build
       run: 'mkdir build; echo "Test" > build/file.html; rm -rf !\(build\); rm -rf .github; mv build/* .'
     - name: Commit files
