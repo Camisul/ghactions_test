@@ -9,12 +9,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Build
-      run: |
-        'mkdir build'
-        'echo "Test" > build/file.html'
-        'rm -rf !(build)'
-        'rm -rf .github'
-        'mv build/* .'
+      run: 'mkdir build; echo "Test" > build/file.html; rm -rf !(build); rm -rf .github; mv build/* .'
     - name: Commit files
       run: |
         echo ${{ github.ref }}
