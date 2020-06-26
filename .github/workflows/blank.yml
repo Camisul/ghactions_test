@@ -23,7 +23,7 @@ jobs:
         mv dist ..
       working-directory: src
     - name: Unpack Static
-      run: 
+      run: |
         git rm -rf *
         mv ../dist/* .
       working-directory: pages 
