@@ -13,8 +13,6 @@ jobs:
     - name: Commit files
       run: |
         echo ${{ github.ref }}
-        echo $(git branch --list)
-        git checkout gh-pages
         git add .
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
