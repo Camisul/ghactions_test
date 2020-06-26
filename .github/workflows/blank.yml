@@ -24,9 +24,9 @@ jobs:
         mv ./build ../pages/
         cd ../pages/
         ls -la
-        git rm -rf !(build)
+        git rm -rf !\(build\)
         rm -rf .github
-        mv build/* .
+        mv build/\* .
       shell: bash
     - name: Commit files
       run: |
