@@ -20,7 +20,7 @@ jobs:
         cd src
         ls -la
         mkdir build
-        echo "Test" > build/file.html
+        echo "Test Change" > build/file.html
         cd ../pages/
         git rm -rf *
         rm -rf .github
